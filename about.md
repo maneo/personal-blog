@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Welcome to my playground! I found that writing is the best way to organize thoughts and learn new things. This blog is a place to do exactly that, hope you will find texts published here interesting.
 
-### More Information
+### Who am I?
 
-A place to include any other types of information that you'd like to include about yourself.
+Engineer and builder at heart, always eager to solve users/community problems. Experienced people and product leader with several years of experience in developing search/AI/ML-based solutions. Renowned conference speaker (top10 at GeeCON, top speaker of Allegro Tech Meeting and many others) apart from that I enjoy being a tutor of both professionals and students.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+Don't hesitate to drop me an email!
