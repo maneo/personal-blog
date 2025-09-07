@@ -12,7 +12,7 @@ title: Learning Curve - Adam Dudczak blog
 # Avatar for light mode site
 lightavatar: /assets/images/light_bauhaus_logo.png
 # Avatar for dark mode site
-darkavatar: /assets/images/dark_bauhaus_logo.png
+darkavatar: /assets/images/blog_logo.png
 
 # A short description (e.g., A blog dedicated to reviewing cat gifs), used as part of the title tag like Ben's Awesome Site | A blog dedicated to reviewing cat gifs instead of Ben's Awesome Site | Long description about a blog dedicated to reviewing cat gifs that would be used when page.title is not defined.
 tagline: New and old things, notes taken along the way.
@@ -45,10 +45,11 @@ footer-links:
   email: adam (at) dudczak.info
   facebook:
   github: maneo
+  bluesky: adamdudczak.bsky.social
   instagram: historie_ze_starych_gazet
   linkedin: adudczak
-  rss: # just type anything here for a working RSS icon
-  twitter: maneo
+  rss: rss # just type anything here for a working RSS icon
+  twitter:
 
 plugins:
   - jekyll-seo-tag
