@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Back to public speaking
+title: Public speaking is fun again
 ---
 
 I really like public speaking. This may sound weird for those who know me better, but I have a lot of satisfaction from the entire process of preparation, rehearsals and then delivering the talk for the first time. My last conference talk took place in 2021, when I was a remote speaker at DevDays which took place "in" Vilnius. Talking to an empty room, without any feedback from the audience was not funny at all. After this, I thought maybe this conference-speaking thing ended for me. 
