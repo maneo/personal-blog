@@ -23,3 +23,7 @@ Below you can find a poster from Netbeans days 2008, which we are talking more a
 
 ![netbeans day 2008]({{site.baseurl}}/assets/images/posts/plakat-nbd.jpg)
 
+Main learnings from this undertaking:
+* Standard vs API - even most stable API is just an API from one vendor.
+* I need to get better mic, audio quality on my side is poor.
+* Suprisingly large part of this interview was dedicated to my pre-Allegro past, it seems that I really enjoyed work in PSNC 😀
