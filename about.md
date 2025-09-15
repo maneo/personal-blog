@@ -10,6 +10,7 @@ Welcome to my playground! I found that writing is the best way to organize thoug
 
 Engineer and builder at heart, always eager to solve users/community problems. Experienced people and product leader with several years of experience in developing search/AI/ML-based solutions. Renowned conference speaker (top10 at GeeCON, top speaker of Allegro Tech Meeting and many others) apart from that I enjoy being a tutor of both professionals and students.
 
+
 ### Contact me
 
 Don't hesitate to drop me an email!
