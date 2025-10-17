@@ -5,11 +5,11 @@ title: Before the peak comes - Software Engineering action story
 
 ## A few words of introduction
 
-I've always wanted to write a Software Engineering action story. Yup, you heard correctly 😃. Usually there are not many strong emotions related to Software Development, so why action story? Because sometimes things are getting out of hand and engineers need to act quickly like action story heroes. Sounds cool? In reality it is stressful as hell...
+Software engineering rarely gets the action-story treatment. But when things spiral out of control—when outages threaten millions and seconds count—developers become unsung heroes, forced to make split-second decisions under incredible stress.
 
-This is not a 100% fictional story during my professional carreer I saw many similar failures and instabilities. The fact that they were solved/patched on an ongoing basis, so as not to stop operation of the platform, is due to the engineers performing the so-called on duty rotation. This means 24/7 readiness to react on signals that something may cause platform to stop serving clients. This story is in fact a tribute to on duty engineers, their commitment, to the stress they had to deal with in the face of crisis, to their camaraderie and readiness to look for a solution together. 
+This is not a 100% fictional story. During my professional career I saw many similar failures and instabilities. The fact that they were solved/patched on an ongoing basis, so as not to stop operation of the platform, is due to the engineers performing the so-called on duty rotation. This means 24/7 readiness to react to signals that something may cause the platform to stop serving clients. This story is in fact a tribute to on duty engineers, their commitment, to the stress they had to deal with in the face of crisis, to their camaraderie and readiness to look for a solution together.
 
-The story is titled "Before the peak comes", I hope you enjoy reading it. I need to warn you, the text is a bit technical, so please fasten your seat belts 😀. (feel free to jump to glossary at the end in case of doubts). 
+The story is titled “Before the peak comes”, I hope you enjoy reading it. I need to warn you, the text is a bit technical, so please fasten your seat belts 😀. (feel free to jump to the glossary at the end in case of doubts).
 
 Finally, I would like to dedicate this short story to the memory of ***Wojtek Stryszyk***. One of the many silent superheroes of Allegro Tech. Thanks Wojtek! Hope you would like this.
 
@@ -86,18 +86,18 @@ Ragnarok: Traffic looks normal, I'll ask Security, but probably not.
 
 <span style="color:seagreen;">John:</span> I am back, how can I help?
 
-<span style="color:aliceblue;">Chicken:</span> I am restarting servers, Wojtek looks for the cause. Traffic is slowly starting to grow, but impact on users is already visible ☹️
+<span style="color:aliceblue;">Chicken:</span> I am restarting servers, Wojtek looks for the cause. Traffic is beginning to increase steadily and impact on users is already visible ☹️
 
-<span style="color:seagreen;">John:</span> <span style="color:steelblue;">@Wojtek</span> if you have nothing else for me to do, I will try to extend the http cache life, it should reduce the load on the servers
+<span style="color:seagreen;">John:</span> <span style="color:steelblue;">@Wojtek</span> if you have nothing else for me to do, I will try to extend the http cache lifetime, it should reduce the load on the servers
 
 <span style="color:steelblue;">Wojtek:</span> thx.
 
 ##### <span style="color:indianred;">7:20 p.m., Friday</span>, company-wide communication channel #outages
 
-DangerousRoman: Since this morning, someone has been trying to carry out SQL injection through a search input window. Single queries, several variants - it didn't look like anything dangerous. 
+DangerousRoman: Since this morning, someone has been trying to carry out SQL injection through a search input. Single queries, several variants - it didn't look like anything dangerous. 
 
 <span style="color:steelblue;">Wojtek:</span> I saw them, tested them and they don't seem to have any impact on the search engine. Any other anomalies?
-
+ 
 DangerousRoman: No, but I'll check the records.
 
 ##### <span style="color:indianred;">7:22 p.m., Friday</span>, internal comm. channel of the Kwark team
@@ -227,7 +227,7 @@ Jacek: I have just tested these queries on the new version of the index, the one
 
 ## Glossary
 
-```Peak``` - peak of traffic, it is different with different services, in case of ecommerce evening peak of traffic starts around 8/9pm. It is crucial for service to be in a good shape when clients want to shop, this is an additional factor increasing tension when solving problems like the ones described in the story.
+```Peak``` - peak of traffic, it is different with different services, in case of ecommerce, evening peak of traffic starts around 8/9pm. It is crucial for service to be in a good shape when clients want to shop, this is an additional factor increasing tension when solving problems like the ones described in the story.
 
 
 ```Full GC``` - in Java Virtual Machines (JVM) based application, Full Garbage Collection is launched when entire memory is occupied and there is no space to allocate new objects. This kind of operation requires that all programs launched in a given JVM are stopped. For high throughput applications stopping a program for several seconds, even minutes means severe problems; it is sometimes faster to restart the whole application (of course this does not solve the root cause).
@@ -246,12 +246,12 @@ Jacek: I have just tested these queries on the new version of the index, the one
 
 ```Regexp``` - regular expressions it is magical way to abstract patterns in text for eg. Ada* will match with words Adam, Adama, Adamowi etc. 
 
-```people for code review``` - code which is going to be responsible for handling queries of Allegro shoppers should be stable, readable and bugfree. Programmers are humans and make errors, to minimize chances of deploying faulty code, it is required that every new piece of code should be reviewed by other two engineers.
+```people for code review``` - code which is going to be responsible for handling queries of shoppers should be stable, readable and bugfree. Programmers are humans and make errors, to minimize chances of deploying faulty code, it is required that every new piece of code should be reviewed by other two engineers.
 
 ```deploy canary``` - deploy services for part of traffic to see if change is working well. This allows to minimize the chance to deploy faulty change.
 
 ```pull request``` - all code which will be changed, in one place, ready to be reviewed.
 
-```Will restart isaura``` - at some point all servers responsible for handling allegro search engine were named with spanish female names. 
+```Will restart isaura``` - at some point all servers responsible for handling Allegro search engine were named with spanish female names. 
 
 ```Apdex``` - percent of users who are able to use service/website without problems. Low apdex means that a significant percent of users do not have access to websites.
