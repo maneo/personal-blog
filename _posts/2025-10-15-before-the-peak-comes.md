@@ -5,13 +5,18 @@ title: Before the peak comes - Software Engineering action story
 
 ## A few words of introduction
 
-Software engineering rarely gets the action-story treatment. But when things spiral out of control—when outages threaten millions and seconds count—developers become unsung heroes, forced to make split-second decisions under incredible stress.
+Software engineering rarely gets the action-story treatment. But when things spiral out of control — when outages threaten millions and seconds count — developers become unsung heroes, forced to make split-second decisions under incredible stress.
 
 This is not a 100% fictional story. During my professional career I saw many similar failures and instabilities. The fact that they were solved/patched on an ongoing basis, so as not to stop operation of the platform, is due to the engineers performing the so-called on duty rotation. This means 24/7 readiness to react to signals that something may cause the platform to stop serving clients. This story is in fact a tribute to on duty engineers, their commitment, to the stress they had to deal with in the face of crisis, to their camaraderie and readiness to look for a solution together.
 
 The story is titled “Before the peak comes”, I hope you enjoy reading it. I need to warn you, the text is a bit technical, so please fasten your seat belts 😀. (feel free to jump to the glossary at the end in case of doubts).
 
-Finally, I would like to dedicate this short story to the memory of ***Wojtek Stryszyk***. One of the many silent superheroes of Allegro Tech. Thanks Wojtek! Hope you would like this.
+```
+Finally, I would like to dedicate this short story to the memory of Wojtek Stryszyk. 
+Great colleuge, extraordinary human being and one of the many silent superheroes of Allegro Tech. 
+Thanks Wojtek! 
+Hope you would like this.
+```
 
 
 ## Before the peak comes
