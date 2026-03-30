@@ -40,6 +40,6 @@ When working with agents it is very tempting just to follow the currents, surf o
 If agents tend to use solutions which you don’t like, use system prompt files like cursor.md/agents.md to pass you general intentions about code quality, test best practices. These files are super important, this is a team asset to hone nad polish.
 
 
-## Intensity on the different level
+## Intensity at the different level
 
 On the other side of this one, AI assisted coding is much more intense than usual coding sessions. As a developer you start your day with a task, trying to figure out what to do, how to implement a solution for a problem in a task. Then you start implementing (with AI), and the solution is ready. Next steps would be code review, testing and after half of day (in best scenario) you have a solution. In case of agentic coding this can be much more intense, code/tests generate blazingly fast, so it is tempting to start two or three tasks in parallel. Result - context switches, a lot of code to read. I did my experiments with overseering two paralel agents coding two things in my app, it was a very intense experience. People now experimenting (or just doing) with agents overseering agents, imho it is the only reasonable way to keep up with this intensity. 
