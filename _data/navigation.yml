@@ -1,4 +1,6 @@
-- name: Home
+- name: Posts
   link: /
+- name: Topics
+  link: /topics/
 - name: About
   link: /about/

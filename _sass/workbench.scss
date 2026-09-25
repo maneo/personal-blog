@@ -1,0 +1,607 @@
+// ==========================================================================
+// Workbench — a small, mobile-first, flat editorial theme for Learning Curve.
+// Structure comes from spacing and type; colour comes from Bauhaus shapes.
+// ==========================================================================
+
+// ---- Tokens --------------------------------------------------------------
+
+:root {
+  --bg: #f4f1ea;
+  --fg: #1b1a18;
+  --muted: #6b665c;
+  --faint: #e6e1d6;
+  --accent: #d6361c;
+  --red: #d6361c;
+  --blue: #1f4fa0;
+  --yellow: #e2a900;
+  --ink: #1b1a18;
+
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-head: "Space Grotesk", var(--font-body);
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 42rem;
+  --gutter: 1.25rem;
+
+  color-scheme: light;
+}
+
+// ---- Base ----------------------------------------------------------------
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(226, 169, 0, 0.35);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.22em;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 2.25em 0 0.6em;
+}
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+main.wrap {
+  flex: 1;
+  padding-bottom: 5rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--fg);
+  color: var(--bg);
+  z-index: 10;
+
+  &:focus {
+    top: 0.5rem;
+  }
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+
+  > * + *::before {
+    content: "·";
+    margin-right: 0.5em;
+  }
+}
+
+// ---- Glyphs (Bauhaus shapes as topic markers) ---------------------------
+
+.glyph {
+  width: 0.65em;
+  height: 0.65em;
+  flex: none;
+  fill: currentColor;
+
+  &--red { color: var(--red); }
+  &--blue { color: var(--blue); }
+  &--yellow { color: var(--yellow); }
+  &--ink { color: var(--ink); }
+  &--muted { color: var(--muted); }
+}
+
+// ---- Header --------------------------------------------------------------
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.brand__logo {
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.9375rem;
+
+  a {
+    text-decoration: none;
+    color: var(--muted);
+
+    &:hover {
+      color: var(--fg);
+    }
+
+    &[aria-current="page"] {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.4em;
+    }
+  }
+}
+
+// ---- Homepage intro ------------------------------------------------------
+
+.intro {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.15rem 0;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--fg);
+  }
+
+  &[aria-pressed="true"] {
+    color: var(--fg);
+  }
+
+  &[aria-pressed="true"] .chip__label {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35em;
+  }
+
+  &[data-empty] {
+    opacity: 0.55;
+  }
+}
+
+.chip__count {
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+// ---- Post log (homepage list) -------------------------------------------
+
+.log__year {
+  margin: 2.75rem 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+
+  &[hidden] { display: none; }
+}
+
+.log__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &[hidden] { display: none; }
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: 0 0.5rem;
+  align-items: baseline;
+  padding: 0.45rem 0;
+
+  &[hidden] { display: none; }
+}
+
+.entry__date {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.entry__title {
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.35;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.entry__topics {
+  display: inline-flex;
+  gap: 0.3rem;
+}
+
+.entry__excerpt {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.entry--latest {
+  padding-bottom: 1rem;
+
+  .entry__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+}
+
+.topic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  text-decoration: none;
+  font-size: 0.875rem;
+  color: var(--muted);
+
+  &:hover {
+    color: var(--fg);
+  }
+}
+
+// ---- Page / post header --------------------------------------------------
+
+.page-head {
+  padding: 2.5rem 0 0;
+  margin-bottom: 2.5rem;
+
+  h1 {
+    font-size: 2.125rem;
+    margin: 0.4rem 0 0;
+  }
+}
+
+.post-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 1rem 0 0;
+}
+
+// ---- Prose (markdown content) -------------------------------------------
+
+.prose {
+  overflow-wrap: break-word;
+
+  > :first-child { margin-top: 0; }
+
+  p,
+  ul,
+  ol {
+    margin: 0 0 1.3em;
+  }
+
+  li + li { margin-top: 0.3em; }
+
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4, h5, h6 { font-size: 1.0625rem; }
+
+  strong { font-weight: 600; }
+
+  img {
+    display: block;
+    margin: 2.25rem auto;
+  }
+
+  blockquote {
+    margin: 2rem 0;
+    padding: 0 0 0 1.25rem;
+    border-left: 3px solid var(--yellow);
+    color: var(--muted);
+    font-size: 1.125rem;
+
+    > :last-child { margin-bottom: 0; }
+  }
+
+  // Section break: three Bauhaus shapes instead of a rule.
+  hr {
+    border: 0;
+    height: 12px;
+    margin: 3rem 0;
+    background:
+      linear-gradient(var(--red), var(--red)) calc(50% - 22px) 50% / 10px 10px no-repeat,
+      radial-gradient(circle, var(--blue) 4.5px, transparent 5px) 50% 50% / 12px 12px no-repeat,
+      linear-gradient(to top right, transparent 49%, var(--yellow) 50%) calc(50% + 22px) 50% / 10px 10px no-repeat;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 1rem 0.5rem 0;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 600;
+    border-bottom: 1px solid var(--muted);
+  }
+}
+
+// ---- Code ----------------------------------------------------------------
+
+code,
+kbd,
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  background: var(--faint);
+  border-radius: 3px;
+}
+
+pre,
+.highlight {
+  background: #1b1b18;
+  color: #f1ede4;
+}
+
+pre {
+  margin: 2rem calc(-1 * var(--gutter));
+  padding: 1rem var(--gutter);
+  overflow-x: auto;
+  line-height: 1.55;
+  white-space: pre;
+}
+
+.highlighter-rouge > .highlight {
+  margin: 0;
+  background: none;
+}
+
+// ---- Post footer ---------------------------------------------------------
+
+.post-foot {
+  margin-top: 4rem;
+}
+
+.pager {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.pager__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.3;
+
+  .meta {
+    font-family: var(--font-body);
+    font-weight: 400;
+  }
+}
+
+.pager__item--next {
+  text-align: right;
+}
+
+// ---- Topics page ---------------------------------------------------------
+
+.topic {
+  scroll-margin-top: 1rem;
+
+  &:target .topic__title {
+    color: var(--accent);
+  }
+}
+
+.topic__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .glyph { width: 0.75em; height: 0.75em; }
+}
+
+.topic__list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.3rem 0;
+  }
+
+  time {
+    flex: none;
+    font-size: 0.875rem;
+    color: var(--muted);
+    padding-top: 0.15em;
+  }
+}
+
+// ---- Footer --------------------------------------------------------------
+
+.site-footer {
+  padding: 2rem 0 2.5rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+    margin: 0 0 0.75rem;
+    padding: 0;
+    list-style: none;
+
+    a {
+      color: var(--fg);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  p {
+    margin: 0.25rem 0 0;
+  }
+}
+
+// ---- Larger screens ------------------------------------------------------
+
+@media (min-width: 40rem) {
+  :root {
+    --gutter: 1.5rem;
+  }
+
+  body {
+    font-size: 1.125rem;
+  }
+
+  .site-header__inner {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .intro {
+    padding: 2.5rem 0 1rem;
+  }
+
+  .page-head h1 {
+    font-size: 2.75rem;
+  }
+
+  .page-head {
+    padding-top: 4rem;
+  }
+
+  .entry {
+    grid-template-columns: 4.25rem 1fr auto;
+    gap: 0 1rem;
+  }
+
+  .pager {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pager__item--next:only-child {
+    grid-column: 2;
+  }
+
+  pre {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 4px;
+  }
+}

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Highlights from airhacks.fm interview
+tags: [cs]
 ---
 
 The history of this conversation goes back to 2022 when I've decided to stop using Twitter. So, I've logged out and decided not to come back. 3 years later, I took a glimpse into my account to check what was left from Twitter after its transformation to X. The only interesting finding was a DM from Adam Bien, with an invitation to his airhack podcast 😀. I don't consider myself as a person worth a podcast, but when we finally met in person during GeeCON 2025 - we finally agreed to get this podcast done.

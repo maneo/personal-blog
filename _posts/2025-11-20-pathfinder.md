@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Story of Pathfinder
+tags: [music]
 ---
 
 

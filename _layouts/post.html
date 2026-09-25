@@ -1,9 +1,34 @@
 ---
 layout: default
 ---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | at_least: 1 -%}
+<article class="post">
+  <header class="page-head">
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      <span>{{ minutes }} min read</span>
+    </p>
+    <h1>{{ page.title }}</h1>
+    {%- if page.tags.size > 0 %}
+    <p class="post-topics">{% include post-topics.html tags=page.tags labels=true %}</p>
+    {%- endif %}
+  </header>
 
-<div class="post">
-  <h1>{{ page.title }}</h1>
-  <span class="fs-4 text-muted">{{ page.date | date: "%b %d, %y" }}</span>
-  <div class="mt-4">{{ content }}</div>
-</div>
+  <div class="prose">{{ content }}</div>
+
+  <footer class="post-foot">
+    <nav class="pager" aria-label="More posts">
+      {%- if page.previous %}
+      <a class="pager__item" href="{{ page.previous.url | relative_url }}" rel="prev">
+        <span class="meta">← Older</span><span>{{ page.previous.title }}</span>
+      </a>
+      {%- endif %}
+      {%- if page.next %}
+      <a class="pager__item pager__item--next" href="{{ page.next.url | relative_url }}" rel="next">
+        <span class="meta">Newer →</span><span>{{ page.next.title }}</span>
+      </a>
+      {%- endif %}
+    </nav>
+  </footer>
+</article>

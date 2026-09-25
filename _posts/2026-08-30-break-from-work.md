@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Career Break 101
+tags: [ramblings]
 ---
 
 

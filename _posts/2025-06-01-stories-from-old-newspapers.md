@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Stories from old newspapers - IG profile update
+tags: [heritage]
 ---
 
 During my sabbatical I allowed myself to dive into a few things which I was always interested in. Inspired by several cool social media profiles created by former Allegro colleagues, I decided to use this medium to share my findings related to local, historical newspapers (Poznań!). 

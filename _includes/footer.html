@@ -1,3 +1,16 @@
-<footer class="footer mt-auto py-3">
-  <div class="container footer-container">{% include svg_icons.html %}</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="links">
+      {%- assign fl = site.footer-links -%}
+      {%- if fl.github %}<li><a href="https://github.com/{{ fl.github }}">github</a></li>{% endif -%}
+      {%- if fl.bluesky %}<li><a href="https://bsky.app/profile/{{ fl.bluesky }}">bluesky</a></li>{% endif -%}
+      {%- if fl.instagram %}<li><a href="https://instagram.com/{{ fl.instagram }}">instagram</a></li>{% endif -%}
+      {%- if fl.linkedin %}<li><a href="https://www.linkedin.com/in/{{ fl.linkedin }}">linkedin</a></li>{% endif -%}
+      {%- if fl.twitter %}<li><a href="https://twitter.com/{{ fl.twitter }}">twitter</a></li>{% endif -%}
+      {%- if fl.facebook %}<li><a href="https://facebook.com/{{ fl.facebook }}">facebook</a></li>{% endif -%}
+      {%- if fl.rss %}<li><a href="{{ '/feed.xml' | relative_url }}">rss</a></li>{% endif -%}
+    </ul>
+    {%- if fl.email %}<p>{{ fl.email }}</p>{% endif %}
+    <p>© {{ site.time | date: "%Y" }} Adam Dudczak</p>
+  </div>
 </footer>

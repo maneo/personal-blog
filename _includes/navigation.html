@@ -1,22 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand p-0" href="{{ '/' | relative_url }}">
-    {% if site.lightavatar or site.darkavatar %}
-    <img src="{{ site.lightavatar | relative_url }}" alt="light avatar" width="30" class="d-inline-block align-top m-0 light-avatar">
-    <img src="{{ site.darkavatar | relative_url }}" alt="dark avatar" width="30" class="d-inline-block align-top m-0 dark-avatar">
-    {% endif %}
-      {{ site.name }}</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        {% for item in site.data.navigation %}
-          <li class="nav-item">
-            <a href="{{ item.link | relative_url }}" {% if page.url == item.link %} class="nav-link active" {% else %} class="nav-link" {% endif %}>{{ item.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ site.avatar | relative_url }}" alt="" width="28" height="28" class="brand__logo">
+      <span class="brand__name">{{ site.name }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      {%- for item in site.data.navigation -%}
+      {%- assign active = false -%}
+      {%- if page.url == item.link or item.link == '/' and page.layout == 'post' -%}{%- assign active = true -%}{%- endif %}
+      <a href="{{ item.link | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ item.name }}</a>
+      {%- endfor %}
+    </nav>
   </div>
-</nav>
+</header>
