@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to build family bank in a few easy steps
+tags: [cs]
 ---
 
 Five years ago, together with my wife we started a discussion about a more systemic approach to teaching our children how to deal with money. Those of you who are parents for sure will name several options, like: pocket money paid every month, money paid for home duties (aka "cheap youth labour"), money give away (aka "grandma mode"), whenever kid come and ask for. Our kids, at that time were 5, 8 and 11, they didn’t have huge needs in terms of their personal spendings so the first two mentioned approaches didn’t make too much sense. The last one would work.. of course, but it is not very educational.

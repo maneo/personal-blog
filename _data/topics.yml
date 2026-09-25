@@ -1,0 +1,18 @@
+# Topics used in post front matter: `tags: [cs, heritage]`.
+# Shapes follow Kandinsky's Bauhaus questionnaire (square/red, circle/blue, triangle/yellow).
+- key: cs
+  name: computer science
+  shape: square
+  color: red
+- key: heritage
+  name: digital heritage
+  shape: triangle
+  color: yellow
+- key: music
+  name: music
+  shape: half
+  color: ink
+- key: ramblings
+  name: ramblings
+  shape: circle
+  color: blue

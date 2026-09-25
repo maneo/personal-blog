@@ -1,0 +1,11 @@
+{%- comment -%} Usage: include topic-glyph.html topic=<entry from site.data.topics> {%- endcomment -%}
+{%- assign t = include.topic -%}
+<svg class="glyph glyph--{{ t.color }}" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+  {%- case t.shape -%}
+  {%- when "square" -%}<rect x="1" y="1" width="10" height="10"/>
+  {%- when "circle" -%}<circle cx="6" cy="6" r="5"/>
+  {%- when "triangle" -%}<path d="M6 0.8 11.4 11H0.6z"/>
+  {%- when "half" -%}<path d="M1 7a5 5 0 0 1 10 0z"/>
+  {%- else -%}<path d="M4.5 1h3v3.5H11v3H7.5V11h-3V7.5H1v-3h3.5z"/>
+  {%- endcase -%}
+</svg>

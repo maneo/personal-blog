@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What a Career Break Taught Me
+tags: [ramblings]
 ---
 
 ## What a Career Break Taught Me

@@ -1,0 +1,10 @@
+{%- comment -%} Usage: include post-topics.html tags=post.tags labels=true {%- endcomment -%}
+{%- for key in include.tags -%}
+  {%- assign t = site.data.topics | where: "key", key | first -%}
+  {%- if t -%}
+  <a class="topic-tag" href="{{ '/topics/' | relative_url }}#{{ t.key }}" title="{{ t.name }}">
+    {%- include topic-glyph.html topic=t -%}
+    {%- if include.labels %}<span>{{ t.name }}</span>{% else %}<span class="visually-hidden">{{ t.name }}</span>{% endif -%}
+  </a>
+  {%- endif -%}
+{%- endfor -%}

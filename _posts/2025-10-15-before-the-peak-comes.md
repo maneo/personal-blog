@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Before the peak comes - Software Engineering action story
+tags: [cs]
 ---
 
 ## A few words of introduction

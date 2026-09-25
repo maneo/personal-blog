@@ -2,18 +2,39 @@
 layout: default
 ---
 
-<div class="archive">
-  {% for post in site.posts %} {% assign currDate = post.date | date: "%Y" %} {%
-  if currDate != date %}
-  <h1 class="archive-year">{{ currDate }}</h1>
-  {% assign date = currDate %} {% endif %}
-  <div class="archive-item">
-    <span class="post-date archive-date fs-4"
-      >{{ post.date | date: "%B %d, %Y" }}</span
-    >
-    <a href="{{ post.url | relative_url }}" class="archive-title fs-4"
-      >{{ post.title }}</a
-    >
+<section class="intro">
+  <div class="filters" role="group" aria-label="Filter posts by topic">
+    <a class="chip" href="{{ '/' | relative_url }}" data-filter="all" aria-pressed="true"><span class="chip__label">all</span> <span class="chip__count">{{ site.posts.size }}</span></a>
+    {%- for t in site.data.topics %}
+    {%- assign n = site.tags[t.key] | size %}
+    <a class="chip" href="{{ '/topics/' | relative_url }}#{{ t.key }}" data-filter="{{ t.key }}" aria-pressed="false"{% if n == 0 %} data-empty{% endif %}>
+      {%- include topic-glyph.html topic=t -%} <span class="chip__label">{{ t.name }}</span> <span class="chip__count">{{ n }}</span>
+    </a>
+    {%- endfor %}
   </div>
-  {% endfor %}
-</div>
+</section>
+
+<section class="log" aria-label="All posts">
+  {%- assign latest = site.posts | first %}
+  {%- for post in site.posts %}
+  {%- assign year = post.date | date: "%Y" %}
+  {%- if year != current_year %}
+  {%- unless forloop.first %}</ol>{% endunless %}
+  <h2 class="log__year"><span>{{ year }}</span></h2>
+  <ol class="log__list" reversed>
+  {%- assign current_year = year %}
+  {%- endif %}
+    <li class="entry{% if post.url == latest.url %} entry--latest{% endif %}" data-topics="{{ post.tags | join: ' ' }}">
+      <time class="entry__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+      <div class="entry__body">
+        <a class="entry__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {%- if post.url == latest.url %}
+        <p class="entry__excerpt">{{ post.description | default: post.content | strip_html | remove_first: post.title | strip | truncatewords: 32 }}</p>
+        {%- endif %}
+      </div>
+      <span class="entry__topics">{% include post-topics.html tags=post.tags %}</span>
+    </li>
+  {%- if forloop.last %}</ol>{% endif %}
+  {%- endfor %}
+  <p class="log__empty" hidden>Nothing here yet — work in progress on the bench.</p>
+</section>

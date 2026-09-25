@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AI Assisted coding - thoughts so far
+tags: [cs]
 ---
 
 ## Fast and furious

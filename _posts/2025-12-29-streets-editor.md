@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introducing NEP and the release of streets-editor
+tags: [heritage, cs]
 ---
 
 ## Long intro aka Product Pitch

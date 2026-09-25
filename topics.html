@@ -1,0 +1,21 @@
+---
+layout: page
+title: Topics
+permalink: /topics/
+---
+
+{%- for t in site.data.topics %}
+{%- assign posts = site.tags[t.key] %}
+<section class="topic" id="{{ t.key }}">
+  <h2 class="topic__title">{% include topic-glyph.html topic=t %} {{ t.name }} <span class="chip__count">{{ posts | size }}</span></h2>
+  {%- if posts.size > 0 %}
+  <ul class="topic__list">
+    {%- for post in posts %}
+    <li><time>{{ post.date | date: "%b %Y" }}</time> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- else %}
+  <p class="muted">Nothing here yet — work in progress on the bench.</p>
+  {%- endif %}
+</section>
+{%- endfor %}
