@@ -1,20 +1,25 @@
 ---
 layout: post
-title: What a Career Break Taught Me
+title: Career Break 101
 ---
 
-## What a Career Break Taught Me
 
 A while back I took a proper break from my career — I needed time to rethink stuff, to think about my health, and spend time with my family.  No projects, no obligations, nothing to prove. This post is my attempt to unpack what actually came out of it, what was really valuable and… what you should consider doing even without a career break. Things are laid without any particular order, all of them are equally important.
+
+## Reset to the baseline
 
 Let’s start with something which was much more complicated than I expected. A reset to baseline when it comes to stress levels. 
 
 How do you feel when you have absolutely zero obligations? Honestly, I struggled to even imagine it. What do you mean, do nothing and just rest? Read a book without watching the clock? Drop every ounce of pressure and simply surrender to dolce far niente?
 
 Okay, fine, but…
+
 Maybe I'll code something on the side… no.
+
 I'll make a list of things to fix around the house… *no*.
+
 I'll finally sort out all those family matters that have been sitting untouched… *NO*.
+
 
 It took me a good while to understand that I didn't have to do anything (well, I have a family, so it's not quite that rosy — but generally, I mean a state where nothing is hanging over your head), and that I could just sit in the square with a coffee and watch people go by. Maybe read a book, listen to some music, and be in no hurry to be anywhere.
 
